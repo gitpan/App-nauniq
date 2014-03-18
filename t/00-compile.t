@@ -4,18 +4,16 @@ use warnings;
 
 # this test was generated with Dist::Zilla::Plugin::Test::Compile 2.039
 
-use Test::More  tests => 4 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
+use Test::More  tests => 2 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
 
 
 
 my @module_files = (
-    'App/nauniq.pm',
-    'App/uappend.pm'
+    'App/nauniq.pm'
 );
 
 my @scripts = (
-    'bin/nauniq',
-    'bin/uappend'
+    'bin/nauniq'
 );
 
 # no fake home requested

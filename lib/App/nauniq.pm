@@ -1,6 +1,6 @@
 package App::nauniq;
 
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 1;
 # ABSTRACT: Non-adjacent uniq
@@ -17,7 +17,7 @@ App::nauniq - Non-adjacent uniq
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
