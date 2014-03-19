@@ -3,10 +3,13 @@ abstract: 'Non-adjacent uniq'
 author:
   - 'Steven Haryanto <stevenharyanto@gmail.com>'
 build_requires:
+  File::Slurp: '0'
   File::Spec: '0'
+  File::chdir: '0'
   IO::Handle: '0'
   IPC::Open3: '0'
-  Test::More: '0'
+  String::ShellQuote: '0'
+  Test::More: '0.98'
 configure_requires:
   ExtUtils::MakeMaker: '6.30'
 dynamic_config: 0
@@ -23,7 +26,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=App-nauniq
   homepage: https://metacpan.org/release/App-nauniq
   repository: git://github.com/sharyanto/perl-App-nauniq.git
-version: '0.02'
+version: '0.03'
 x_Dist_Zilla:
   perl:
     version: '5.018002'
@@ -233,6 +236,14 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Run::Release
       name: '@Author::SHARYANTO/Run::Release'
       version: '0.020'
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: test
+          type: requires
+      name: TestRequires
+      version: '5.013'
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:

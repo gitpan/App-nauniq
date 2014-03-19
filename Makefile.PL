@@ -26,12 +26,15 @@ my %WriteMakefileArgs = (
     "Tie::Cache" => 0
   },
   "TEST_REQUIRES" => {
+    "File::Slurp" => 0,
     "File::Spec" => 0,
+    "File::chdir" => 0,
     "IO::Handle" => 0,
     "IPC::Open3" => 0,
-    "Test::More" => 0
+    "String::ShellQuote" => 0,
+    "Test::More" => "0.98"
   },
-  "VERSION" => "0.02",
+  "VERSION" => "0.03",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -39,10 +42,13 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "File::Slurp" => 0,
   "File::Spec" => 0,
+  "File::chdir" => 0,
   "IO::Handle" => 0,
   "IPC::Open3" => 0,
-  "Test::More" => 0,
+  "String::ShellQuote" => 0,
+  "Test::More" => "0.98",
   "Tie::Cache" => 0
 );
 

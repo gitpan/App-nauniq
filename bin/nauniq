@@ -6,7 +6,7 @@ use warnings;
 
 use Getopt::Long;
 
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 my %Opts = (
     append         => 0,
@@ -26,7 +26,7 @@ sub parse_cmdline {
         'repeated|d'       =>
             sub { $Opts{show_unique} = 0; $Opts{show_repeated} = 1 },
         'ignore-case|i'    => \$Opts{ignore_case},
-        'num-entries|n=i'  => \$Opts{num_entries},
+        'num-entries=i'    => \$Opts{num_entries},
         'skip-chars|s=i'   => \$Opts{skip_chars},
         'unique|u'         =>
             sub { $Opts{show_unique} = 1; $Opts{show_repeated} = 0 },
@@ -38,7 +38,9 @@ sub parse_cmdline {
         'forget-pattern=s' => sub {
             my ($cbobj, $val) = @_;
             eval { $val = $Opts{ignore_case} ? qr/$val/i : qr/$val/ };
-            if ($@) { die "Invalid regex pattern in --forget-pattern: $@\n" }
+            if ($@) {
+                warn "Invalid regex pattern in --forget-pattern: $@\n"; exit 99;
+            }
             $Opts{forget_pattern} = $val;
         },
         'md5'              => \$Opts{md5},
@@ -171,7 +173,7 @@ nauniq - Non-adjacent uniq
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -198,7 +200,7 @@ Print only duplicate lines. The opposite of C<--unique>.
 
 Ignore case.
 
-=item * --num-entries=N, -n
+=item * --num-entries=N
 
 Number of unique entries to remember. The default is -1 (unlimited). This option
 is to control memory usage, but the consequence is that lines that are too far
@@ -299,8 +301,6 @@ Using Tie::Cache's MaxBytes option.
 =head1 SEE ALSO
 
 L<uniq>
-
-L<uappend>
 
 =head1 HOMEPAGE
 
