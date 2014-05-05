@@ -6,7 +6,7 @@ use warnings;
 
 use Getopt::Long;
 
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 my %Opts = (
     append         => 0,
@@ -48,8 +48,8 @@ sub parse_cmdline {
         'help|h'           => sub {
             print <<USAGE;
 Usage:
-  $0 [OPTIONS]... [INPUT [OUTPUT]]
-  $0 --help
+  nauniq [OPTIONS]... [INPUT [OUTPUT]]
+  nauniq --help
 Options:
   --repeated, -d
   --ignore-case, -i
@@ -173,7 +173,7 @@ nauniq - Non-adjacent uniq
 
 =head1 VERSION
 
-version 0.04
+This document describes version 0.05 of nauniq (from Perl distribution App-nauniq), released on 2014-05-05.
 
 =head1 SYNOPSIS
 
@@ -263,7 +263,7 @@ the file.
 
 0 on success.
 
-1 on I/O error.
+255 on I/O error.
 
 99 on command-line options error.
 
@@ -283,6 +283,8 @@ as it will clobber the file first. But you can do this with C<nauniq>:
 =head1 TODO
 
 =over
+
+=item * --record-separator
 
 =item * Support more C<uniq> options
 

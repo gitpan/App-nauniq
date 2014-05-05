@@ -1,6 +1,6 @@
 package App::nauniq;
 
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 1;
 # ABSTRACT: Non-adjacent uniq
@@ -17,7 +17,7 @@ App::nauniq - Non-adjacent uniq
 
 =head1 VERSION
 
-version 0.04
+This document describes version 0.05 of App::nauniq (from Perl distribution App-nauniq), released on 2014-05-05.
 
 =head1 SYNOPSIS
 

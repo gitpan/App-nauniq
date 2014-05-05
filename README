@@ -2,7 +2,8 @@ NAME
     App::nauniq - Non-adjacent uniq
 
 VERSION
-    version 0.04
+    This document describes version 0.05 of App::nauniq (from Perl
+    distribution App-nauniq), released on 2014-05-05.
 
 SYNOPSIS
     See the command-line script nauniq.

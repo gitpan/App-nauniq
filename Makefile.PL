@@ -23,6 +23,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "App::nauniq",
   "PREREQ_PM" => {
+    "IPC::Cmd" => "0.52",
     "Tie::Cache" => 0
   },
   "TEST_REQUIRES" => {
@@ -34,7 +35,7 @@ my %WriteMakefileArgs = (
     "String::ShellQuote" => 0,
     "Test::More" => "0.98"
   },
-  "VERSION" => "0.04",
+  "VERSION" => "0.05",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -46,6 +47,7 @@ my %FallbackPrereqs = (
   "File::Spec" => 0,
   "File::chdir" => 0,
   "IO::Handle" => 0,
+  "IPC::Cmd" => "0.52",
   "IPC::Open3" => 0,
   "String::ShellQuote" => 0,
   "Test::More" => "0.98",
