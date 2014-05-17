@@ -6,7 +6,7 @@ use warnings;
 
 use Getopt::Long;
 
-our $VERSION = '0.05'; # VERSION
+our $VERSION = '0.06'; # VERSION
 
 my %Opts = (
     append         => 0,
@@ -173,7 +173,7 @@ nauniq - Non-adjacent uniq
 
 =head1 VERSION
 
-This document describes version 0.05 of nauniq (from Perl distribution App-nauniq), released on 2014-05-05.
+This document describes version 0.06 of nauniq (from Perl distribution App-nauniq), released on 2014-05-17.
 
 =head1 SYNOPSIS
 
