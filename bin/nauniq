@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!perl
 
 use 5.010001;
 use strict;
@@ -6,7 +6,7 @@ use warnings;
 
 use Getopt::Long;
 
-our $VERSION = '0.06'; # VERSION
+our $VERSION = '0.07'; # VERSION
 
 my %Opts = (
     append         => 0,
@@ -173,7 +173,7 @@ nauniq - Non-adjacent uniq
 
 =head1 VERSION
 
-This document describes version 0.06 of nauniq (from Perl distribution App-nauniq), released on 2014-05-17.
+This document describes version 0.07 of nauniq (from Perl distribution App-nauniq), released on 2015-01-03.
 
 =head1 SYNOPSIS
 
@@ -280,26 +280,6 @@ as it will clobber the file first. But you can do this with C<nauniq>:
 
  % produce-lines | nauniq -a - FILE
 
-=head1 TODO
-
-=over
-
-=item * --record-separator
-
-=item * Support more C<uniq> options
-
---skip-fields (-f), --zero-terminated (-z).
-
-=item * Specify memory limit?
-
-Using Tie::Cache's MaxBytes option.
-
-=item * Debugging option: print memory usage at the end of run
-
-=item * Debugging option: print whenever forget pattern matches
-
-=back
-
 =head1 SEE ALSO
 
 L<uniq>
@@ -322,11 +302,11 @@ feature.
 
 =head1 AUTHOR
 
-Steven Haryanto <stevenharyanto@gmail.com>
+perlancar <perlancar@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Steven Haryanto.
+This software is copyright (c) 2015 by perlancar@cpan.org.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
